@@ -5,11 +5,11 @@ getClientKey().then(clientKey => {
     const urlParams = new URLSearchParams(queryResultString)
     const redirectResult = urlParams.get('redirectResult')
     const sessionId = urlParams.get('sessionId')
-    console.log(sessionId)
 
     function initiateSession() {
         sessions()
             .then(response => {
+                console.log(response.id)
                 const configuration = {
                     environment: 'test', // Change to 'live' for the live environment.
                     clientKey: clientKey, // Public key used for client-side authentication: https://docs.adyen.com/development-resources/client-side-authentication
