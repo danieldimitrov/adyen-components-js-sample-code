@@ -5,6 +5,7 @@ getClientKey().then(clientKey => {
     const urlParams = new URLSearchParams(queryResultString)
     const redirectResult = urlParams.get('redirectResult')
     const sessionId = urlParams.get('sessionId')
+    console.log(sessionId)
 
     function initiateSession() {
         sessions()
