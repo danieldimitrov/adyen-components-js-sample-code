@@ -10,6 +10,7 @@ getClientKey().then(clientKey => {
         sessions()
             .then(response => {
                 console.log(response.id)
+                console.log("ClientKey:" + clientKey)
                 const configuration = {
                     environment: 'test', // Change to 'live' for the live environment.
                     clientKey: clientKey, // Public key used for client-side authentication: https://docs.adyen.com/development-resources/client-side-authentication
